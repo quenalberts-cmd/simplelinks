@@ -1,0 +1,36 @@
+:root {
+  color-scheme: light dark;
+  font: 14px/1.4 system-ui, sans-serif;
+  color: var(--ds-text, CanvasText);
+  background: var(--ds-surface-overlay, Canvas);
+}
+
+body { margin: 0; }
+main { padding: 12px; }
+form, label, ul { display: grid; gap: 7px; }
+[hidden] { display: none; }
+form { gap: 11px; }
+label { font-weight: 600; }
+input, select, button, .action {
+  font: inherit;
+  color: inherit;
+  padding: 6px 9px;
+  border-radius: 6px;
+  border: 1px solid var(--ds-border, GrayText);
+  background: var(--ds-surface-raised, Canvas);
+}
+input, select { min-width: 0; }
+button, .action { cursor: pointer; text-decoration: none; }
+button:disabled { cursor: wait; opacity: .65; }
+.primary { background: var(--ds-background-brand-bold, #1454b8); color: white; }
+button:hover:not(:disabled), .action:hover { border-color: var(--ds-border-focused, #579dff); }
+p { margin: 12px 0; }
+ul { list-style: none; margin: 0; padding: 0; }
+li {
+  display: grid;
+  gap: 6px;
+  border-top: 1px solid var(--ds-border, GrayText);
+  padding: 8px 0;
+  overflow-wrap: anywhere;
+}
+.actions { display: flex; flex-wrap: wrap; gap: 6px; }
